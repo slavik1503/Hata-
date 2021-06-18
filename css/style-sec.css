@@ -15,6 +15,9 @@ sup{
 }
 hr{
     border: 1px solid #e4e4ec;
+    border-top: none;
+    border-left: none;
+    border-right: none;
 }
 .clear::after{
     content: "";
@@ -38,6 +41,10 @@ hr{
     font-size: 14px;
     text-align: left;
     box-sizing: border-box;
+}
+h1,
+h2{
+    font: 700 24px "Roboto Slab";
 }
 header{
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -176,7 +183,7 @@ a.in:hover{
 }
 .table h1{
     color: #24242b;
-    font-family: 700 24px "Roboto Slab";
+    font: 700 24px "Roboto Slab";
 }
 .section p{
     padding: 0;
@@ -186,7 +193,9 @@ a.in:hover{
 .section a{
     color: #fd8300;
 }
-
+.section a:hover{
+    text-decoration: none;
+}
 .table table{
     width: 100%;
     border-collapse: collapse;
