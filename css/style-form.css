@@ -254,12 +254,16 @@ hr{
     font: 700 15px/1.7em "Roboto Slab";
 }
 input:first-child{
-    margin: 10px 10px 10px 0;
+   margin: 0 10px 0 0;
 }
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder{
     color: #9999a6;
     font: italic 13px/1.6em "Arial";
+}
+.flex{
+    display: flex;
+    margin-bottom: 10px;
 }
 input{
     padding: 15px;
@@ -269,6 +273,9 @@ input{
     background-color: #fff;
     border: 1px solid #c5c5d4;
 }
+input.text{
+    width: 50%;
+}
 input:focus{
     border: 1px solid orange;
 }
@@ -277,6 +284,9 @@ input.sms{
     width: 100%;
 }
 textarea{
+    min-height: 105px;
+    max-height: 305px;
+    resize: vertical;
     width: 100%;
     margin-bottom: 10px;
     padding: 15px;

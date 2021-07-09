@@ -87,8 +87,10 @@
             <div class="form">
                 <h2>Форма зворотнього зв’язку</h2>
                 <form action="form.php" method="GET">
-                    <input type="text" placeholder="Ваше ім’я">
-                    <input type="tel" placeholder="Телефон">
+                    <div class="flex">
+                        <input class="text" type="text" placeholder="Ваше ім’я">
+                        <input class="text" type="tel" placeholder="Телефон">
+                    </div>
                     <input class="sms" type="text" placeholder="Тема повідомлення">
                     <textarea placeholder="Текст"></textarea>
                     <input class="oval-button" type="submit" value="Відправити">
