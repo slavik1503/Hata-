@@ -311,6 +311,38 @@ textarea::-webkit-input-placeholder{
     background-color: #ffffff;
     border: 1px solid #c5c5d4;
 }
+.form input.checkbox{
+    display: none;
+}
+.form input.checkbox+label{
+    position: relative;
+    padding-left: 20px;
+}
+.form input.checkbox+label::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.form input.checkbox:checked+label::before{
+    border-color: #666;
+}
+.form input.checkbox:checked+label::after{
+    content: "";
+    position: absolute;
+    left: 3px;
+    top: -1px;
+    width: 3px;
+    height: 6px;
+    border: 2px solid transparent;
+    border-bottom-color: #000;
+    border-right-color: #000;
+    transform: rotate(45deg);
+}
 .form P{
     display: inline-block;
     margin: 0 0 0 20px;
