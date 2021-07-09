@@ -253,7 +253,7 @@ hr{
     color: #24242b;
     font: 700 15px/1.7em "Roboto Slab";
 }
-.form input:first-child{
+input:first-child{
     margin: 10px 10px 10px 0;
 }
 input::-webkit-input-placeholder,
@@ -261,64 +261,57 @@ textarea::-webkit-input-placeholder{
     color: #9999a6;
     font: italic 13px/1.6em "Arial";
 }
-.form input{
-    width: 224px;
-    height: 40px;
+input{
+    padding: 15px;
     border-radius: 3px;
-    display: inline-block;
+    box-sizing: border-box;
+    outline: none;
     background-color: #fff;
     border: 1px solid #c5c5d4;
 }
-.form input.sms{
-    width: 468px;
-    height: 40px;
+input:focus{
+    border: 1px solid orange;
+}
+input.sms{
     margin-bottom: 10px;
+    width: 100%;
+}
+textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 15px;
     border-radius: 3px;
+    box-sizing: border-box;
+    outline: none;
     background-color: #fff;
     border: 1px solid #c5c5d4;
 }
-.form textarea{
-    width: 468px;
-    height: 105px;
-    border-radius: 3px;
-    background-color: #fff;
-    border: 1px solid #c5c5d4;
+textarea:focus{
+    border: 1px solid orange;
 }
-.form input.submit{
-    font-size: 14px;
-    line-height: 24px;
-    color: black;
-    font-weight: bold;
-    font-family: "Arial";
-    text-align: center;
-    width: 140px;
-    height: 41px;
-    border-radius: 21px;
-    border: 2px solid #fd8300;
-    background-color: #fff;
-    margin-top: 10px;
-    transition: all 0.5s ease;
+input.submit{
+    padding: 0;
 }
-.form input.submit:hover{
+input.submit:hover{
     cursor: pointer;
     color: #fff;
     background-color: #fd8300;
 }
-.form input.checkbox{
+input.checkbox{
     width: 15px;
     height: 15px;
     border-radius: 3px;
     background-color: #ffffff;
     border: 1px solid #c5c5d4;
 }
-.form input.checkbox{
+input.checkbox{
     display: none;
 }
-.form input.checkbox+label{
+input.checkbox+label{
     position: relative;
     padding-left: 52px;
 }
-.form input.checkbox+label::before{
+input.checkbox+label::before{
     content: "";
     position: absolute;
     left: 32px;
@@ -328,10 +321,10 @@ textarea::-webkit-input-placeholder{
     border: 1px solid #c5c5d4;
     border-radius: 3px;
 }
-.form input.checkbox:checked+label::before{
+input.checkbox:checked+label::before{
     border-color: #c5c5d4;
 }
-.form input.checkbox:checked+label::after{
+input.checkbox:checked+label::after{
     content: "";
     position: absolute;
     left: 36px;
