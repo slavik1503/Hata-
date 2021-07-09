@@ -256,6 +256,11 @@ hr{
 .form input:first-child{
     margin: 10px 10px 10px 0;
 }
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder{
+    color: #9999a6;
+    font: italic 13px/1.6em "Arial";
+}
 .form input{
     width: 224px;
     height: 40px;
@@ -312,7 +317,7 @@ hr{
 }
 label{
     color: #666;
-    font-family: 13px/1.6em "Arial";
+    font: 13px/1.6em "Arial";
 }
 footer{
     background-color: #ededf5;
