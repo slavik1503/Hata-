@@ -24,7 +24,12 @@ hr{
     display: block;
     clear: both;
 }
+h1,
+h2{
+    font: 700 24px "Roboto Slab";
+}
 .wrapper{
+    padding: 0 15px;
     margin: 0 auto;
     max-width: 960px;
 }
@@ -33,25 +38,82 @@ hr{
     font-size: 0;
     text-align: center;
 }
-.column{
+.column,
+.column-menu{
     display: inline-block;
-    margin: 0 14px;
+    margin: 0 14px 10px 14px;
     vertical-align: middle;
     width: 219px;
     font-size: 14px;
     text-align: left;
     box-sizing: border-box;
 }
-h1,
-h2{
-    font: 700 24px "Roboto Slab";
+.burger,
+.burger2{
+    width:45px;
+    height:35px;
+    margin-top:15px;
+    padding:4px 0;
+    float:right;
+    border:1px solid #c2c9db;
+    border-radius:10px;
+    display:none;
+    background-color:transparent;
 }
-header{
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+.burger2{
+    border:1px solid #fd8300;
+}
+.stick2,
+.stick3{
+    width:35px;
+    height: 10px;
+    margin:0 auto;
+    border-radius:5px;
+    position:relative;
+    background-color:#c2c9db;
+}
+.stick3{
+    background-color:#fd8300;
+}
+.stick2::before,
+.stick3::before{
+    content:"";
+    position:absolute;
+    width: 35px;
+    height:9px;
+    top:13px;
+    margin:0 auto;
+    border-radius:5px;
+    background-color:#c2c9db;
+}
+.stick3::before{
+    background-color:#fd8300;
+}
+.stick2::after,
+.stick3::after{
+    content:"";
+    position:absolute;
+    width:35px;
+    height:9px;
+    top:25px;
+    margin:0 auto;
+    border-radius:5px;
+    background-color:#c2c9db;
+}
+.stick3::after{
+    background-color:#fd8300;
 }
 .header-top{
     padding: 20px 0;
     background-color: #1f1f56;
+}
+.flex,
+.flex-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.color{
+    color: #1f1f56;
 }
 .header-top ul{
     margin: 0;
@@ -153,7 +215,9 @@ a.in:hover{
     background-color: #e4e4ec;
 }
 .phone,
-.mail{
+.mail,
+.phone-bot,
+.mail-bot{
     padding-left: 40px;
     box-sizing: border-box;
 }
@@ -181,10 +245,6 @@ a.in:hover{
     color: #fff;
     background-color: #fd8300;
 }
-.table h1{
-    color: #24242b;
-    font: 700 24px "Roboto Slab";
-}
 .section p{
     padding: 0;
     color: #666;
@@ -196,40 +256,40 @@ a.in:hover{
 .section a:hover{
     text-decoration: none;
 }
-.table table{
+.table-price{
     width: 100%;
     border-collapse: collapse;
     border-radius: 3px;
     overflow: hidden;
 }
-.table thead {
+.table-price thead{
     color: #fff;
     text-align: left;
-    font: 14px/1.7em "Roboto Slab";
+    font: 700 14px/1.7em "Roboto Slab";
     background-color: #1f1f56;
 }
-.table th{
+.table-price th{
     padding: 12px 20px 8px;
 }
-.table tbody{
+.table-price tbody{
     color: #666;
-    font: 14px/1.7em "Arial" ;
+    font: 14px/1.7em Arial;
 }
-.table tbody tr{
+.table-price tbody tr{
     background-color: #e4e4ec;
 }
-.table tbody tr:hover{
+.table-price tbody tr:hover{
     color: #fff;
     background-color: #fd8300;
 }
-.table tbody tr+tr{
+.table-price tbody tr + tr{
     border-top: 1px solid #cdcddd;
 }
-.table td{
+.table-price td{
     padding: 8px 20px;
 }
-.table th:last-child,
-.table td:last-child{
+.table-price th:last-child,
+.table-price td:last-child{
     text-align: right;
 }
 .house{
@@ -262,7 +322,7 @@ footer{
     background-color: #ededf5;
 }
 .footer-top{
-    padding: 40px 0 30px;
+    padding: 40px 15px 30px 15px;
 }
 .footer-top .column{
     vertical-align: top;
@@ -289,4 +349,66 @@ footer{
     color: #9999a6;
     font-family: 13px/1.4em "Arial";
     text-align: center;
+}
+
+@media screen and (max-width: 740px){
+    .stick::before{
+        display: none;
+    }
+    .flex-menu{
+        flex-direction: column-reverse;
+    }
+    .column-menu{
+        display: block;
+        width: auto;
+    }
+}
+@media screen and (max-width: 650px){
+    .burger,
+    .burger2{
+        margin: 0;
+        display: block;
+    }
+    .navigation{
+        display: none;
+    }
+    .basic-inf{
+        display: none;
+    }
+    .header-top{
+        padding: 10px 0;
+    }
+    .header-top ul{
+        padding: 15px 0 0 0;
+    }
+}
+@media screen and (max-width: 572px){
+    .phone-bot{
+        display: none;
+    }
+    .mail-bot{
+        margin-right: 0;
+    }
+}
+@media screen and (max-width: 720px){
+    .table thead,
+    .table tbody{
+        font-size: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 520px){
+    .tprice{
+        overflow-x: scroll;
+    }
+    .tprice::-webkit-scrollbar{
+        height: 15px;
+        background-image: linear-gradient(to top, transparent 45%, grey 45%, grey 55%, transparent 55%);
+        border-radius: 50%;
+    }
+    .tprice::-webkit-scrollbar-thumb{
+        background-color: lightgrey;
+        border-radius: 10px;
+    }
 }
