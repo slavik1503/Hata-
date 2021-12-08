@@ -536,7 +536,7 @@ footer{
         justify-content: space-around;
     }
     .map{
-        margin: 0;
+        margin: 0 0 25px 0;
     }
 }
 @media screen and (max-width: 745px){
@@ -548,5 +548,28 @@ footer{
     .main-column{
         max-width: 100%;
         padding-bottom: 10px;
+    }
+}
+@media screen and (max-width: 470px){
+    input.checkbox+label{
+        padding-left: 33px;
+        
+    }
+    input.checkbox+label::before{
+        left: 8px;
+    }
+    input.checkbox:checked+label::after{
+        left: 12px;
+    }
+}
+@media screen and (max-width: 803px){
+    input.checkbox+label{
+        padding-left: 31px;
+    }
+    input.checkbox+label::before{
+        left: 4px;
+    }
+    input.checkbox:checked+label::after{
+        left: 8px;
     }
 }
